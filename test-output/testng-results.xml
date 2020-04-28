@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="23" total="24" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Audit created & default audit info displayed successfully]]>
+    </line>
+    <line>
+      <![CDATA[Selection: java.awt.datatransfer.StringSelection@3b366632]]>
+    </line>
+    <line>
+      <![CDATA[Browse button clicked]]>
+    </line>
+    <line>
+      <![CDATA[Image uploaded for the audit successfully]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="65521" started-at="2020-04-28T04:56:40Z" finished-at="2020-04-28T04:57:46Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="65521" started-at="2020-04-28T04:56:40Z" finished-at="2020-04-28T04:57:46Z">
+      <class name="com.testcases.BuildAuditPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.testcases.BuildAuditPageTest@57fffcd7]" name="setUp" is-config="true" duration-ms="46167" started-at="2020-04-28T04:56:40Z" finished-at="2020-04-28T04:57:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verify_Create_audit_and_upload_image_to_audit_Test()[pri:0, instance:com.testcases.BuildAuditPageTest@57fffcd7]" name="verify_Create_audit_and_upload_image_to_audit_Test" duration-ms="18342" started-at="2020-04-28T04:57:26Z" finished-at="2020-04-28T04:57:45Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Audit created & default audit info displayed successfully]]>
+            </line>
+            <line>
+              <![CDATA[Selection: java.awt.datatransfer.StringSelection@3b366632]]>
+            </line>
+            <line>
+              <![CDATA[Browse button clicked]]>
+            </line>
+            <line>
+              <![CDATA[Image uploaded for the audit successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verify_Create_audit_and_upload_image_to_audit_Test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.testcases.BuildAuditPageTest@57fffcd7]" name="tearDown" is-config="true" duration-ms="973" started-at="2020-04-28T04:57:45Z" finished-at="2020-04-28T04:57:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.testcases.BuildAuditPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

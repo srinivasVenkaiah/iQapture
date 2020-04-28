@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [New iQapture Application Test Automation Test Suite]">
+  <listeners>
+    <listener class-name="Analyzer.MyTransformer"/>
+    <listener class-name="com.Listeners.WebEventListener"/>
+  </listeners>
+  <test thread-count="5" name="New iQapture App Test Cases(failed)">
+    <groups>
+      <run>
+        <include name="AuditPermissions"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.testcases.BuildAuditPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verify_Audit_Capture_Owner_user_permissions_Test"/>
+          <include name="verify_Audit_Build_Edit_user_permissions_Test"/>
+          <include name="setUp"/>
+          <include name="verify_Audit_Capture_Do_user_permissions_Test"/>
+          <include name="verify_Audit_Capture_View_user_permissions_Test"/>
+          <include name="verify_Audit_Capture_Edit_user_permissions_Test"/>
+        </methods>
+      </class> <!-- com.testcases.BuildAuditPageTest -->
+    </classes>
+  </test> <!-- New iQapture App Test Cases(failed) -->
+</suite> <!-- Failed suite [New iQapture Application Test Automation Test Suite] -->

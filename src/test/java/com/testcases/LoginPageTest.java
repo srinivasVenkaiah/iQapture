@@ -1,0 +1,79 @@
+/**
+ * @author UmaMaheswararao
+ */
+
+package com.testcases;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import org.testng.Assert;
+import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.base.BasePage;
+import com.pages.LoginPage;
+import com.pages.TaskBoardPage;
+import com.util.Container;
+
+public class LoginPageTest extends BasePage {
+	
+	LoginPage loginPage;
+	TaskBoardPage taskBoardPage;
+	
+	@BeforeMethod
+	public void setUp() {
+		initialization();
+		loginPage = new LoginPage();
+	}
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+	
+	@Test
+	public void LoginPage_Title_Test(){
+		String title = loginPage.validate_LoginPage_Title();
+		Assert.assertEquals(title, "login");
+		Reporter.log("LoginPage Title Verified", true);
+	}
+	
+	@Test(dependsOnMethods="LoginPage_Title_Test")
+	public void Login_Test() throws Exception{
+		taskBoardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		Reporter.log("User Loggedin Successfully & Dash Board Page Opened", true);
+	}
+	
+	@Test(dependsOnMethods="LoginPage_Title_Test")
+	public void verify_Valuechain_wesite_navigation_on_clicking_Valuechain_logo_Test() throws Exception{
+		loginPage.verify_Valuechain_wesite_navigation_on_clicking_Valuechain_logo("Valuechain | Smart Manufacturing Software to Create World-Class Supply Chains");
+		Reporter.log("User able to navigate valuechain website on clicking Valuechain log", true);
+	}
+	
+	
+	@DataProvider
+	public Iterator<Object[]> getLoginTestData() {
+		ArrayList<Object[]> testData = Container.getLoginDataFromExcel();
+		return testData.iterator();
+	}
+	
+	@Test(dataProvider="getLoginTestData", enabled=false)
+	public void verify_Login_form(String username, String password) throws Exception{
+		loginPage.verify_Login_form(username, password);
+		Reporter.log("User Loggedin Successfully & DashBoard Page Opened", true);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
